@@ -1,1 +1,4 @@
+src/hr/fesb/java/library/model/Searchable.java
+src/hr/fesb/java/library/model/Borrowable.java
+src/hr/fesb/java/library/exceptions/ItemNotAvailableException.java
 src/hr/fesb/java/library/LibraryApp.java
