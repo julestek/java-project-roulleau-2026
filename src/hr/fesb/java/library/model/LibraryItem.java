@@ -1,7 +1,7 @@
-package src.hr.fesb.java.library.model;
+package hr.fesb.java.library.model;
 
 
-import hr.fest.java.library.exceptions.ItemNotAvailableExceptiob;
+import hr.fesb.java.library.exceptions.ItemNotAvailableException;
 import java.time.LocalDate;
 
 public abstract class LibraryItem implements Borrowable, Searchable { 
