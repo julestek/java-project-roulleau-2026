@@ -47,8 +47,7 @@ public abstract class LibraryItem implements Borrowable, Searchable {
     @Override
     public void borrowItem() throws ItemNotAvailableException {
         if (copiesAvailable <= 0)
-            throw new ItemNotAvailableException(
-                "No copies available for: \"" + title + "\"");
+            throw new ItemNotAvailableException("No copies available for: \"" + title + "\"");
         copiesAvailable--;
     }
 
@@ -85,26 +84,26 @@ public abstract class LibraryItem implements Borrowable, Searchable {
     // Getters and setters
     // ----------------------------------------------------------------
 
-    public String getItemId()          { return itemId; }
+    public String getItemId() { return itemId; }
 
-    public String getTitle()           { return title; }
+    public String getTitle() { return title; }
     public void setTitle(String title) {
         if (title == null || title.trim().isEmpty())
             throw new IllegalArgumentException("Title cannot be empty.");
         this.title = title.trim();
     }
 
-    public int getPublicationYear()              { return publicationYear; }
+    public int getPublicationYear() { return publicationYear; }
     public void setPublicationYear(int year) {
         if (year < 1 || year > LocalDate.now().getYear())
             throw new IllegalArgumentException("Invalid publication year: " + year);
         this.publicationYear = year;
     }
 
-    public int getCopiesAvailable()              { return copiesAvailable; }
-    public void setCopiesAvailable(int n)        { this.copiesAvailable = n; }
+    public int getCopiesAvailable() { return copiesAvailable; }
+    public void setCopiesAvailable(int n) { this.copiesAvailable = n; }
 
-    public int getTotalCopies()                  { return totalCopies; }
+    public int getTotalCopies() { return totalCopies; }
     public void setTotalCopies(int n) {
         if (n < 1)
             throw new IllegalArgumentException("Total copies must be >= 1.");
@@ -117,9 +116,6 @@ public abstract class LibraryItem implements Borrowable, Searchable {
 
     @Override
     public String toString() {
-        return String.format("[%s] \"%s\" (%d) — %d/%d copies available",
-            getClass().getSimpleName(), title, publicationYear,
-            copiesAvailable, totalCopies);
+        return String.format("[%s] \"%s\" (%d) — %d/%d copies available", getClass().getSimpleName(), title, publicationYear, copiesAvailable, totalCopies);
     }
-
 }
