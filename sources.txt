@@ -1,4 +1,5 @@
 src/hr/fesb/java/library/exceptions/ItemNotAvailableException.java
+src/hr/fesb/java/library/exceptions/MemberNotFoundException.java
 src/hr/fesb/java/library/exceptions/InvalidISBNException.java
 src/hr/fesb/java/library/model/LibraryItem.java
 src/hr/fesb/java/library/model/AudioFormat.java
