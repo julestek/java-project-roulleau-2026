@@ -28,8 +28,8 @@ public class Magazine extends LibraryItem {
         if (publisher == null || publisher.trim().isEmpty())
             throw new IllegalArgumentException("Publisher cannot be empty.");
         this.issueNumber = issueNumber;
-        this.month       = month;
-        this.publisher   = publisher.trim();
+        this.month = month;
+        this.publisher = publisher.trim();
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Magazine extends LibraryItem {
 
     @Override
     public String getSummary() {
-        return String.format("\"%s\" — Issue %d (%02d/%d) by %s", getTitle(), issueNumber, month, getPublicationYear(), publisher);
+        return String.format("\"%s\" - Issue %d (%02d/%d) by %s", getTitle(), issueNumber, month, getPublicationYear(), publisher);
     }
 
     @Override
@@ -58,9 +58,9 @@ public class Magazine extends LibraryItem {
     }
 
     // --- Getters ---
-    public int    getIssueNumber() { return issueNumber; }
-    public int    getMonth()       { return month; }
-    public String getPublisher()   { return publisher; }
+    public int getIssueNumber() { return issueNumber; }
+    public int getMonth() { return month; }
+    public String getPublisher() { return publisher; }
 
     // --- Setters ---
     public void setIssueNumber(int n) {

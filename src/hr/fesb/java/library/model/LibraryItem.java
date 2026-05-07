@@ -14,9 +14,9 @@ public abstract class LibraryItem implements Borrowable, Searchable {
 
     /**
     * @param itemId          unique identifier
-    * @param title           item title
+    * @param title           what is the item
     * @param publicationYear must be between 1 and the current year
-    * @param totalCopies     must be >= 1
+    * @param totalCopies     must be >= 1, otherwise it doesn't exist
     * @throws IllegalArgumentException if any argument is invalid
     */
 
@@ -40,9 +40,7 @@ public abstract class LibraryItem implements Borrowable, Searchable {
     }
     
 
-    // ----------------------------------------------------------------
     // Borrowable implementation
-    // ----------------------------------------------------------------
 
     @Override
     public void borrowItem() throws ItemNotAvailableException {
@@ -62,27 +60,21 @@ public abstract class LibraryItem implements Borrowable, Searchable {
         return copiesAvailable > 0;
     }
 
-    // ----------------------------------------------------------------
-    // Abstract methods — each subclass MUST implement differently
-    // ----------------------------------------------------------------
+    // Abstract methods
 
     /**
      * Returns a formatted one-line catalogue entry for this item.
-     * Used in the CSV file and in the catalogue table.
      * @return catalogue entry string
      */
     public abstract String getCatalogueEntry();
 
     /**
-     * Returns a short, human-readable summary of this item.
-     * Used in dialogs, tooltips, and loan confirmations.
+     * Returns a short, readable summary of this item.
      * @return summary string
      */
     public abstract String getSummary();
 
-    // ----------------------------------------------------------------
     // Getters and setters
-    // ----------------------------------------------------------------
 
     public String getItemId() { return itemId; }
 
@@ -110,9 +102,7 @@ public abstract class LibraryItem implements Borrowable, Searchable {
         this.totalCopies = n;
     }
 
-    // ----------------------------------------------------------------
     // Object overrides
-    // ----------------------------------------------------------------
 
     @Override
     public String toString() {

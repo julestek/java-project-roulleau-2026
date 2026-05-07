@@ -1,8 +1,12 @@
 src/hr/fesb/java/library/exceptions/ItemNotAvailableException.java
 src/hr/fesb/java/library/exceptions/InvalidISBNException.java
 src/hr/fesb/java/library/model/LibraryItem.java
+src/hr/fesb/java/library/model/AudioFormat.java
+src/hr/fesb/java/library/model/AgeRating.java
+src/hr/fesb/java/library/model/Audiobook.java
 src/hr/fesb/java/library/model/Searchable.java
 src/hr/fesb/java/library/model/Book.java
 src/hr/fesb/java/library/model/Borrowable.java
+src/hr/fesb/java/library/model/DVD.java
 src/hr/fesb/java/library/model/Magazine.java
 src/hr/fesb/java/library/LibraryApp.java

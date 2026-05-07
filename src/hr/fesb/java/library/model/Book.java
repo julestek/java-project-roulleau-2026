@@ -28,8 +28,7 @@ public class Book extends LibraryItem {
         if (author == null || author.trim().isEmpty())
             throw new IllegalArgumentException("Author cannot be empty.");
         if (!isbn.matches("\\d{13}"))
-            throw new InvalidISBNException(
-                "ISBN must be exactly 13 digits. Received: " + isbn);
+            throw new InvalidISBNException("ISBN must be exactly 13 digits. Received: " + isbn);
         this.author = author.trim();
         this.isbn   = isbn;
         this.genre  = (genre != null) ? genre.trim() : "Unknown";
@@ -42,7 +41,7 @@ public class Book extends LibraryItem {
 
     @Override
     public String getSummary() {
-        return String.format("\"%s\" by %s — %s (%d)", getTitle(), author, genre, getPublicationYear());
+        return String.format("\"%s\" by %s - %s (%d)", getTitle(), author, genre, getPublicationYear());
     }
 
     @Override
@@ -57,15 +56,13 @@ public class Book extends LibraryItem {
 
     @Override
     public String toString() {
-        return getSummary() + " | ISBN: " + isbn
-            + " | Copies: " + getCopiesAvailable()
-            + "/" + getTotalCopies();
+        return getSummary() + " | ISBN: " + isbn + " | Copies: " + getCopiesAvailable() + "/" + getTotalCopies();
     }
 
     // --- Getters ---
     public String getAuthor() { return author; }
-    public String getIsbn()   { return isbn; }
-    public String getGenre()  { return genre; }
+    public String getIsbn() { return isbn; }
+    public String getGenre() { return genre; }
 
     // --- Setters ---
     public void setAuthor(String author) {
