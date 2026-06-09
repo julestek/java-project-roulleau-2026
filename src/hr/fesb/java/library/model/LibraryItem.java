@@ -106,6 +106,6 @@ public abstract class LibraryItem implements Borrowable, Searchable {
 
     @Override
     public String toString() {
-        return String.format("[%s] \"%s\" (%d) — %d/%d copies available", getClass().getSimpleName(), title, publicationYear, copiesAvailable, totalCopies);
+        return String.format("[%s] \"%s\" (%d), %d/%d copies available", getClass().getSimpleName(), title, publicationYear, copiesAvailable, totalCopies);
     }
 }

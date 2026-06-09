@@ -10,13 +10,13 @@ public class Audiobook extends LibraryItem{
     private AudioFormat format;
 
     /**
-     * @param itemId          unique identifier
-     * @param title           audiobook title
-     * @param narrator        narrator name (non-empty)
-     * @param durationHours   must be > 0
+     * @param itemId unique identifier
+     * @param title audiobook title
+     * @param narrator narrator name (non-empty)
+     * @param durationHours must be > 0
      * @param publicationYear must be between 1 and current year
-     * @param format          MP3 or CD
-     * @param totalCopies     must be >= 1
+     * @param format MP3 or CD
+     * @param totalCopies must be >= 1
      * @throws IllegalArgumentException if any argument is invalid
     */
 
@@ -38,7 +38,7 @@ public class Audiobook extends LibraryItem{
 
     @Override
     public String getSummary() {
-        return String.format("\"%s\" narrated by %s — %.1f h (%s)", getTitle(), narrator, durationHours, format);
+        return String.format("\"%s\" narrated by %s, %.1f h (%s)", getTitle(), narrator, durationHours, format);
     }
 
     @Override
