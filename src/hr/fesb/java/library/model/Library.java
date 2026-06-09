@@ -122,10 +122,10 @@ public class Library {
     }
 
     // Package-private access for LibraryFileManager
-    HashMap<String, LibraryItem> getCatalogue() { return catalogue; }
-    HashMap<String, Member> getMembers() { return members; }
-    TreeSet<Loan> getActiveLoanSet() { return activeLoans; }
-    List<Loan> getLoanHistory() { return loanHistory; }
+    public HashMap<String, LibraryItem> getCatalogue() { return catalogue; }
+    public HashMap<String, Member> getMembers() { return members; }
+    public TreeSet<Loan> getActiveLoanSet() { return activeLoans; }
+    public List<Loan> getLoanHistory() { return loanHistory; }
 
     /**
      * Creates a new loan for the given member and item.

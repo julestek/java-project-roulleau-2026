@@ -14,3 +14,4 @@ src/hr/fesb/java/library/model/Searchable.java
 src/hr/fesb/java/library/model/Member.java
 src/hr/fesb/java/library/model/Loan.java
 src/hr/fesb/java/library/model/Library.java
+src/hr/fesb/java/library/io/LibraryFileManager.java
