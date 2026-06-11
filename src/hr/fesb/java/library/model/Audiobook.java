@@ -33,12 +33,12 @@ public class Audiobook extends LibraryItem{
 
     @Override
     public String getCatalogueEntry() {
-        return String.format("AUDIOBOOK,%s,%s,%s,%.1f,%d,%s,%d,%d", getItemId(), getTitle(), narrator, durationHours, getPublicationYear(), format, getTotalCopies(), getCopiesAvailable());
+        return String.format(java.util.Locale.US, "AUDIOBOOK,%s,%s,%s,%.1f,%d,%s,%d,%d",getItemId(), getTitle(), narrator, durationHours, getPublicationYear(), format, getTotalCopies(), getCopiesAvailable());
     }
 
     @Override
     public String getSummary() {
-        return String.format("\"%s\" narrated by %s, %.1f h (%s)", getTitle(), narrator, durationHours, format);
+        return String.format(java.util.Locale.US, "\"%s\" narrated by %s, %.1f h (%s)", getTitle(), narrator, durationHours, format);
     }
 
     @Override
