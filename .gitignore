@@ -1,4 +1,5 @@
 /bin/
+/out/
 *.class
 .idea/
 *.iml
@@ -6,3 +7,4 @@
 .eclipse/
 *.project
 *.classpath
+sources.txt
