@@ -13,10 +13,10 @@ public abstract class LibraryItem implements Borrowable, Searchable {
     private int totalCopies;
 
     /**
-    * @param itemId          unique identifier
-    * @param title           what is the item
+    * @param itemId unique identifier
+    * @param title what is the item
     * @param publicationYear must be between 1 and the current year
-    * @param totalCopies     must be >= 1, otherwise it doesn't exist
+    * @param totalCopies must be >= 1, otherwise it doesn't exist
     * @throws IllegalArgumentException if any argument is invalid
     */
 

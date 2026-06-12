@@ -7,13 +7,13 @@ public class DVD extends LibraryItem {
     private AgeRating ageRating;
 
     /**
-     * @param itemId          unique identifier
-     * @param title           DVD title
-     * @param director        director name (non-empty)
+     * @param itemId unique identifier
+     * @param title DVD title
+     * @param director director name (non-empty)
      * @param durationMinutes must be > 0
      * @param publicationYear must be between 1 and current year
-     * @param ageRating       age rating classification
-     * @param totalCopies     must be > 0
+     * @param ageRating age rating classification
+     * @param totalCopies must be > 0
      * @throws IllegalArgumentException if any argument is invalid
     */
 

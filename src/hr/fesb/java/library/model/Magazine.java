@@ -10,13 +10,13 @@ public class Magazine extends LibraryItem {
     private String publisher;
 
     /**
-     * @param itemId          unique identifier
-     * @param title           magazine title
-     * @param issueNumber     must be >= 1
-     * @param month           must be between 1 and 12
+     * @param itemId unique identifier
+     * @param title magazine title
+     * @param issueNumber must be >= 1
+     * @param month must be between 1 and 12
      * @param publicationYear must be between 1 and current year
-     * @param publisher       publisher name (non-empty)
-     * @param totalCopies     must be >= 1
+     * @param publisher publisher name (non-empty)
+     * @param totalCopies must be >= 1
      * @throws IllegalArgumentException if any argument is invalid
      */
     public Magazine(String itemId, String title, int issueNumber, int month, int publicationYear, String publisher, int totalCopies) {

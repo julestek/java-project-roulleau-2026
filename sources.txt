@@ -15,3 +15,7 @@ src/hr/fesb/java/library/model/Member.java
 src/hr/fesb/java/library/model/Loan.java
 src/hr/fesb/java/library/model/Library.java
 src/hr/fesb/java/library/io/LibraryFileManager.java
+src/hr/fesb/java/library/gui/LibraryGUI.java
+src/hr/fesb/java/library/gui/CataloguePanel.java
+src/hr/fesb/java/library/gui/MembersPanel.java
+src/hr/fesb/java/library/gui/LoansPanel.java

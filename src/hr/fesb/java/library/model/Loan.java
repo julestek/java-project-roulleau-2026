@@ -19,9 +19,9 @@ public class Loan implements Comparable<Loan> {
     private LocalDate   returnDate;
 
     /**
-     * @param loanId     unique identifier (non-empty)
-     * @param item       the borrowed item (non-null)
-     * @param member     the borrowing member (non-null)
+     * @param loanId unique identifier (non-empty)
+     * @param item the borrowed item (non-null)
+     * @param member the borrowing member (non-null)
      * @param borrowDate the date the item was borrowed (non-null)
      * @throws IllegalArgumentException if any argument is invalid
      */
@@ -52,14 +52,14 @@ public class Loan implements Comparable<Loan> {
 
     /**
      * @return number of days overdue, 0 if not overdue
-     */
+    */
     public long getDaysOverdue() {
         if (!isOverdue()) return 0;
         return ChronoUnit.DAYS.between(dueDate, LocalDate.now());
     }
 
     /**
-     * @return fine amount in EUR (0.20 per day late), 0.00 if not overdue
+    * @return fine amount in EUR (0.20 per day late), 0.00 if not overdue
      */
     public double getFineAmount() {
         return getDaysOverdue() * FINE_PER_DAY;
@@ -101,13 +101,7 @@ public class Loan implements Comparable<Loan> {
 
     @Override
     public String toString() {
-        String status = isReturned()
-            ? "returned on " + returnDate
-            : isOverdue()
-                ? String.format("OVERDUE %d day(s), fine: %.2f EUR",
-                    getDaysOverdue(), getFineAmount())
-                : "due " + dueDate;
-        return String.format("Loan[%s] %s --> \"%s\" | %s",
-            loanId, member.getName(), item.getTitle(), status);
+        String status = isReturned() ? "returned on " + returnDate : isOverdue() ? String.format("OVERDUE %d day(s), fine: %.2f EUR", getDaysOverdue(), getFineAmount()) : "due " + dueDate;
+        return String.format("Loan[%s] %s --> \"%s\" | %s", loanId, member.getName(), item.getTitle(), status);
     }
 }

@@ -12,14 +12,14 @@ public class Book extends LibraryItem {
     private String genre;
 
     /**
-     * @param itemId          unique identifier
-     * @param title           book title
-     * @param author          author name (non-empty)
-     * @param isbn            must be exactly 13 digits
+     * @param itemId unique identifier
+     * @param title book title
+     * @param author author name (non-empty)
+     * @param isbn must be exactly 13 digits
      * @param publicationYear must be between 1 and current year
-     * @param genre           book genre
-     * @param totalCopies     must be >= 1
-     * @throws InvalidISBNException     if ISBN is not 13 digits
+     * @param genre book genre
+     * @param totalCopies must be >= 1
+     * @throws InvalidISBNException if ISBN is not 13 digits
      * @throws IllegalArgumentException if any other argument is invalid
      */
 
